@@ -40,7 +40,6 @@
         performQuery("/book");
 
         function buttonClicked() {
-            debugger;
             let currentPage = $("#currentPage").val();
             let path = "/book?page=" + (++currentPage);
             performQuery(path);
@@ -85,7 +84,6 @@
             $('#nextButton').hide();
             $('.loader').show();
             $.get({url: url, success: function(result){
-                    debugger;
                     parseResult(result)
                 }});
         }
